@@ -45,7 +45,7 @@ services:
 
   kpi:
     image: kobotoolbox/kpi:2.020.30-hotfix-2450
-    hostname: kpi
+    hostname: proagenda2030/kpi:pa.v0.2
     env_file:
       - ../kobo-env/envfile.txt
       - ../kobo-env/envfiles/databases.txt

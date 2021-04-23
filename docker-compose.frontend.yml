@@ -44,7 +44,7 @@ services:
           - kobocat.docker.container
 
   kpi:
-    image: proagenda2030/kpi:pa.v0.5
+    image: proagenda2030/kpi:pa.v0.7
     hostname: kpi
     env_file:
       - ../kobo-env/envfile.txt

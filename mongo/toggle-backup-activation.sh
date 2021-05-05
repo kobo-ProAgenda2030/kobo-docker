@@ -64,6 +64,12 @@ else
         apt-get install -y python3-pip --quiet=2 > /dev/null
         python3 -m pip install --upgrade --quiet pip
         python3 -m pip install --upgrade --quiet virtualenv
+        # *************************************************************
+        # Fix to Python3.5 unsupported installation of pip. When KoboToolbox fixes this the following line should not be necessary
+        # get-pip.py taken with: `curl  https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py`
+        echo " Installing pip with get-pip.py (fix to python3.5 EOL)"
+        python3 ./get-pip.py --quiet
+        # *************************************************************
         counter=1
         max_retries=3
         # Under certain circumstances a race condition occurs. Virtualenv creation
